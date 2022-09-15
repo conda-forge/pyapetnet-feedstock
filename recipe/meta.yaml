@@ -1,5 +1,5 @@
 {% set name = "pyapetnet" %}
-{% set version = "1.2" %}
+{% set version = "1.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapetnet-{{ version }}.tar.gz
-  sha256: b5621676fc0bfda1ffd4bfcc037652f8360e1811e04c319cc1f4545f72a66ef8
+  sha256: 22ea14cd207ede8e43fb392a53b75a55b7e2a895467c0a1a013be4f92b2682a5
 
 build:
   number: 0
