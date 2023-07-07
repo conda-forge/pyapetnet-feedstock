@@ -14,9 +14,9 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - pyapetnet_predict_from_nifti=pyapetnet.command_line_tools:predict_from_nifti
-    - pyapetnet_predict_from_dicom=pyapetnet.command_line_tools:predict_from_dicom
-    - pyapetnet_list_models=pyapetnet.command_line_tools:list_models
+    - pyapetnet_predict_from_nifti=pyapetnet.predict_from_nifti:main
+    - pyapetnet_predict_from_dicom=pyapetnet.predict_from_dicom:main
+    - pyapetnet_list_models=pyapetnet.list_models:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
