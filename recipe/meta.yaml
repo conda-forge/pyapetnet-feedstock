@@ -22,7 +22,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<3.9
+    - python
     - setuptools-scm
     - setuptools_scm_git_archive
   run:
@@ -30,7 +30,7 @@ requirements:
     - nibabel >=3.0
     - pydicom >=2.0
     - pymirc >=0.22
-    - python >=3.6,<3.9
+    - python
     - tensorflow >=2.2
 
 test:
