@@ -21,17 +21,18 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
     - setuptools-scm
     - setuptools_scm_git_archive
   run:
+    - python >=3.6
     - matplotlib-base >=3.1
     - nibabel >=3.0
     - pydicom >=2.0
-    - pymirc >=0.22
-    - python
+    - pymirc >=0.29
     - tensorflow >=2.2
+    - SimpleITK >=2.0
 
 test:
   imports:
