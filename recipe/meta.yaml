@@ -1,5 +1,5 @@
 {% set name = "pyapetnet" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapetnet-{{ version }}.tar.gz
-  sha256: 5f48e78fed2d4f609861df512ea033fe4f21105ad3e303dfc3d1b456abd3a6e4
+  url: https://github.com/gschramm/pyapetnet/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: d7ac81e2364a411a4523ba755612af003d9f4ccde44a4963a38f5a745d834a3c
 
 build:
   number: 0
@@ -21,18 +21,15 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
     - setuptools-scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.6
-    - matplotlib-base >=3.1
-    - nibabel >=3.0
-    - pydicom >=2.0
+    - python >=3.8
+    - SimpleITK >=2.0
     - pymirc >=0.29
     - tensorflow >=2.2
-    - SimpleITK >=2.0
 
 test:
   imports:
