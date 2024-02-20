@@ -11,7 +11,7 @@ source:
   sha256: 3a4b27511157b537a3ffe6fd5568ba8b8dfccd15f76c7d989d8ae8453533a256
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyapetnet_predict_from_nifti=pyapetnet.predict_from_nifti:main
