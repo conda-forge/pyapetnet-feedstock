@@ -17,6 +17,8 @@ build:
     - pyapetnet_predict_from_nifti=pyapetnet.predict_from_nifti:main
     - pyapetnet_predict_from_dicom=pyapetnet.predict_from_dicom:main
     - pyapetnet_list_models=pyapetnet.list_models:main
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{version}}
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
