@@ -33,7 +33,7 @@ requirements:
 test:
   imports:
     - pyapetnet
-    source_files:
+  source_files:
     - ./demo_data
   commands:
     - pip check
