@@ -35,6 +35,7 @@ test:
     - pyapetnet
   source_files:
     - ./demo_data
+    - ./tests
   commands:
     - pip check
     - pyapetnet_list_models
