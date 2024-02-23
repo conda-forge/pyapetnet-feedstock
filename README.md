@@ -7,7 +7,7 @@ Home: https://github.com/gschramm/pyapetnet
 
 Package license: MIT
 
-Summary: a CNN for anatomy-guided deconvolution and denoising of PET images
+Summary: CNN for anatomy-guided PET reconstruction
 
 Current build status
 ====================
