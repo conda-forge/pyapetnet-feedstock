@@ -38,7 +38,7 @@ test:
     - pyapetnet_list_models --help
     - pyapetnet_predict_from_dicom --help
     - pyapetnet_predict_from_nifti --help
-    - pyapetnet_predict_from_nifti demo_data/brainweb_06_osem_cropped.nii demo_data/brainweb_06_t1_cropped.nii S2_osem_b10_fdg_pe2i --no_preproc_save --verbose --no_coreg
+    - pyapetnet_predict_from_nifti demo_data/brainweb_06_osem_cropped.nii demo_data/brainweb_06_t1_cropped.nii S2_osem_b10_fdg_pe2i --no-save_preproc --verbose --no-coreg_inputs
     - pytest -v tests
   requires:
     - pip
