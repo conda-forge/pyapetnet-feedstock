@@ -1,5 +1,5 @@
 {% set name = "pyapetnet" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/gschramm/pyapetnet/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 3a4b27511157b537a3ffe6fd5568ba8b8dfccd15f76c7d989d8ae8453533a256
+  sha256: 64b297091b528c46b3b63fecf4bb0899e97162dbea369de5f5779c3ef06673f8
 
 build:
   number: 0
