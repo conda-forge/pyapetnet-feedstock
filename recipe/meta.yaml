@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapetnet-{{ version }}.tar.gz
-  sha256: d9ac8a03e8f0cf8a2637da0dc9266fb96620af88e3fdd70e9504694b09f1870e
+  url: https://github.com/gschramm/pyapetnet/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 64b297091b528c46b3b63fecf4bb0899e97162dbea369de5f5779c3ef06673f8
 
 build:
   entry_points:
@@ -33,11 +33,14 @@ requirements:
 test:
   imports:
     - pyapetnet
+    source_files:
+    - ./demo_data
   commands:
     - pip check
-    - pyapetnet_list_models --help
+    - pyapetnet_list_models
     - pyapetnet_predict_from_dicom --help
     - pyapetnet_predict_from_nifti --help
+    - pyapetnet_predict_from_nifti demo_data/brainweb_06_osem_cropped.nii demo_data/brainweb_06_t1_cropped.nii S2_osem_b10_fdg_pe2i --no-save_preproc --verbose --no-coreg_inputs
     - pytest -v tests
   requires:
     - pip
