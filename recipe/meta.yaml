@@ -1,5 +1,5 @@
 {% set name = "pyapetnet" %}
-{% set version = "1.5.4" %}
+{% set version = "1.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gschramm/pyapetnet/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d634188f1326754d24d6d698bb5c7a62b304c3cdfc91baeba2188aa141d652ac
+  sha256: d7eb43e8bd26a8ab3dad1dafae7e19e7ec8a15599b885b2b065c9511d7db818b
 
 build:
   entry_points:
@@ -29,6 +29,7 @@ requirements:
     - pymirc >=0.29,<1.dev0
     - click >=8.0,<9.dev0
     - tensorflow >=2.13,<3.dev0
+    - keras >=2.0,<3.dev0
 
 test:
   imports:
