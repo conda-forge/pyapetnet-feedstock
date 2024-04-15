@@ -29,6 +29,7 @@ requirements:
     - pymirc >=0.29,<1.dev0
     - click >=8.0,<9.dev0
     - tensorflow >=2.13,<3.dev0
+    - keras >=2.0,<3.dev0
 
 test:
   imports:
