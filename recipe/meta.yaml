@@ -16,15 +16,15 @@ build:
     - pyapetnet_predict_from_nifti = pyapetnet.scripts.predict_from_nifti:predict_from_nifti
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9,<3.11
+    - python {{ python_min }}
     - pdm-backend
     - pip
   run:
-    - python >=3.9,<3.11
+    - python >={{ python_min }},<3.11
     - simpleitk >=2.0,<3.dev0
     - pymirc >=0.29,<1.dev0
     - click >=8.0,<9.dev0
@@ -47,6 +47,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/gschramm/pyapetnet
