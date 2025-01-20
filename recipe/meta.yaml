@@ -28,8 +28,7 @@ requirements:
     - simpleitk ~=2.0
     - pymirc ~=0.29
     - click ~=8.0
-    - tensorflow ~=2.13
-    - keras >=2.0
+    - tensorflow <=2.15
 
 test:
   imports:
