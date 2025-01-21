@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - setuptools >=61.0
     - wheel
     - setuptools-scm
@@ -48,7 +48,7 @@ test:
   requires:
     - pip
     - pytest
-    - python {{ python_min }}
+    - python >={{ python_min }}
 
 about:
   home: https://github.com/gschramm/pyapetnet
