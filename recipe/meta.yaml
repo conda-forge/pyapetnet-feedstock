@@ -27,6 +27,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - scipy >1.9 # needed due to bug in solver
     - simpleitk ~=2.0
     - pymirc ~=0.29
     - click ~=8.0
