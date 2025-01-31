@@ -1,5 +1,5 @@
 {% set name = "pyapetnet" %}
-{% set version = "1.5.5" %}
+{% set version = "1.5.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gschramm/pyapetnet/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d7eb43e8bd26a8ab3dad1dafae7e19e7ec8a15599b885b2b065c9511d7db818b
+  sha256: f54c13933cb8b0e6f337db3f704de8227e18b3e141b45c7be12ba5fa56b2d52a
 
 build:
   entry_points:
@@ -20,16 +20,18 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<3.11
-    - pdm-backend
+    - python {{ python_min }}
+    - setuptools >=61.0
+    - wheel
+    - setuptools-scm
     - pip
   run:
-    - python >=3.9,<3.11
-    - simpleitk >=2.0,<3.dev0
-    - pymirc >=0.29,<1.dev0
-    - click >=8.0,<9.dev0
-    - tensorflow >=2.13,<3.dev0
-    - keras >=2.0,<3.dev0
+    - python >={{ python_min }}
+    - scipy >1.9 # needed due to bug in solver / incorrect deps of other packages
+    - simpleitk ~=2.0
+    - pymirc ~=0.29
+    - click ~=8.0
+    - tensorflow <=2.15
 
 test:
   imports:
@@ -47,6 +49,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/gschramm/pyapetnet
