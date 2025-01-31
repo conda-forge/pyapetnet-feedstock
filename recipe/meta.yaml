@@ -27,6 +27,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - scipy >1.9 # needed due to bug in solver / incorrect deps of other packages
     - simpleitk ~=2.0
     - pymirc ~=0.29
     - click ~=8.0
@@ -49,7 +50,6 @@ test:
     - pip
     - pytest
     - python {{ python_min }}
-    - scipy >1.9 # needed due to bug in solver
 
 about:
   home: https://github.com/gschramm/pyapetnet
